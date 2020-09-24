@@ -2,12 +2,12 @@
 function promisify(fn, ctx = swan) {
 
     if (typeof fn !== 'function') {
-        throw new TypeError(String(method) + ' is not a function');
+        throw new TypeError(String(fn) + ' is not a function');
     }
 
     return function (options) {
 
-        if (Object.prototype.toString.call(options) !== '[object Object]') {
+        if (({}).toString.call(options) !== '[object Object]') {
             throw new TypeError(String(options) + ' is not a object');
         }
 
